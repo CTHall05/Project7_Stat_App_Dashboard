@@ -12,6 +12,10 @@
     integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
     crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+    integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    crossorigin="anonymous">
+  </script>
   <title>Document</title>
 </head>
 
@@ -68,13 +72,23 @@
           <canvas id="traffic-chart"></canvas>
         </div>
       </section>
-    </main>
 
+      <section class="daily">
+        <h3>Daily Traffic</h3>
+        <div class="widget-container-half">
+          <canvas id="daily-chart"></canvas>
+        </div>
+      </section>
+      
+      <section class="mobile">
+        <h3>MOBILE USERS</h3>
+        <div class="widget-container-half">
+          <canvas id="mobile-chart"></canvas>
+        </div>
+      </section>
+    </main>
+  </div>
   <script src="Js/app.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
-    integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
-    crossorigin="anonymous">
-  </script>
 </body>
 
 </html>
