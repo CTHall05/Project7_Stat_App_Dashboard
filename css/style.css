@@ -1,6 +1,7 @@
 /* Base Styles */
 * {
   box-sizing: border-box;
+  outline: none;
 }
 
 html {
@@ -84,8 +85,16 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 50px;
   grid-area: navigation;
   background-color: #5ac1d8;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.svg-properties {
+  width: 40px;
+  height: 40px;
 }
 
 /* Main Content Stlying */
@@ -104,9 +113,9 @@ h3 {
 .headline {
   margin: 10px;
   margin-left: 30px;
-  border: solid 1px red;
-  color: #333;
-  font-weight: lighter;
+  font-size: 25px;
+  color: #358597;
+  font-weight: medium;
   align-items: center;
 }
 
@@ -148,18 +157,19 @@ input:focus {
 /* Alert Bar */
 
 .alert {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
   justify-items: flex-start;
   align-items: center;
   margin: 20px;
   padding-left: 20px;
+  padding-right: 20px;
   background-color: #f4a896;
   color: white;
   border-radius: 8px;
 }
 
 .alert p {
+  flex-grow: 1;
   margin-left: 10px;
   font-family: sans-serif, fantasy;
   font-weight: 700;
@@ -170,8 +180,49 @@ input:focus {
   font-size: 0.8rem;
 }
 
-.alert-close-button {
-  position: relative;
+.alert-close-btn {
+  border: none;
+  background-color: #f4a896;
+  color: white;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.alert-close-btn:hover {
+  color: #358597;
+}
+
+/* Traffic Header  */
+
+.traffic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.traffic-nav {
+  list-style-type: none;
+  padding: 0;
+  color: #358597;
+  text-align: center;
+  font-style: arial;
+  font-weight: 600;
+  gap: 10px;
+}
+
+.traffic-nav li {
+  width: 90px;
+  border: solid 2px white;
+  flex: auto;
+}
+
+.traffic-nav li:hover {
+  background-color: #358597;
+  border: solid 2px #358597;
+  color: #f4a896;
+  border-radius: 80%;
 }
 
 /* Media Queries */
@@ -191,5 +242,23 @@ input:focus {
     flex-direction: column;
     justify-content: flex-start;
     width: 75px;
+  }
+
+  .traffic-header {
+    color: #358597;
+  }
+
+  .traffic-header h3 {
+    font-size: 1.1rem;
+    margin: 10px;
+  }
+
+  .traffic-nav {
+    display: flex;
+  }
+  .traffic-nav li {
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
   }
 }
