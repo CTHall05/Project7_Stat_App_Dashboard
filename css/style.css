@@ -1,4 +1,11 @@
 /* Base Styles */
+
+:root {
+  --main-project-color: #358597;
+  --seccond-project-color: #f4a896;
+  --lighter-main-color: #5ac1d8;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -17,6 +24,10 @@ a {
   text-decoration: none;
 }
 
+canvas {
+  max-width: 100%;
+}
+
 /* Grid Container */
 
 .grid-container {
@@ -33,10 +44,10 @@ a {
 /* Header Styling */
 
 .header {
-  padding: 5px;
+  padding: 0px 5px;
   grid-area: header;
   color: white;
-  background-color: rgb(106, 42, 235);
+  background-color: var(--main-project-color);
 }
 
 .app-container {
@@ -63,7 +74,7 @@ a {
 
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   grid-area: navigation;
   background-color: lightblue;
@@ -81,6 +92,34 @@ a {
   flex-basis: 50px;
   width: 40px;
   height: 40px;
+}
+
+/* Dashboard and Searchbox */
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.headline {
+  margin: auto auto;
+}
+
+.main-header-search {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  gap: 2px;
+}
+
+.search-button {
+  height: 20px;
+  background-color: #5ac1d8;
+  color: white;
+  border-radius: 10%;
+  border: 1px solid grey;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
