@@ -20,7 +20,7 @@
     <!-- Header -->
     <header class="header">
       <div class="app-container">
-        <h1>Analitics4U</h1>
+        <h1>Theon</h1>
         <div id="headerBar">
           <img id="icon-bell" class="bell-icon" src="icons/icon-bell.svg" alt="bell-icon">
           <div id="notifications"></div>
@@ -32,8 +32,11 @@
 
     <!-- Nav (for sidebar navigation) -->
     <nav class="navigation">
-      <a href="#">Nav4U</a>
       <!-- <img> -->
+      <img class="svg-properties" id="svg-dashboard" src="icons/icon-dashboard.svg" alt="dashboard-icon">
+      <img class="svg-properties" id="svg-members-icon" src="icons/icon-members.svg" alt="members-icon">
+      <img class="svg-properties" id="svg-members-icon" src="icons/icon-visits.svg" alt="visits-icon">
+      <img class="svg-properties" id="svg-settings-icon" src="icons/icon-settings.svg" alt="settings-icon">
     </nav>
 
     <!-- Main -->
@@ -48,11 +51,22 @@
 
       <div class="alert" id="alert">
         <h4>Alert:</h4><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique iusto corrupti incidunt quos iste porro quibusdam magnam ducimus consectetur id.</p>
-        <button class="alert-close-btn"><i class="fa fa-close"></i></button>
+        <button class="alert-close-btn"><i class="fa fa-close fa-lg"></i></button>
       </div>
 
-      <section>
-
+      <section class="traffic">
+        <div class="traffic-header">
+            <h3>TRAFFIC</h3>
+            <ul class="traffic-nav">
+              <li class="traffic-nav-link">Hourly</li>
+              <li class="traffic-nav-link">Daily</li>
+              <li class="traffic-nav-link active">Weekly</li>
+              <li class="traffic-nav-link">Monthly</li>
+            </ul>
+        </div>
+        <div class="widget-container-full">
+          <canvas id="traffic-chart"></canvas>
+        </div>
       </section>
     </main>
 
