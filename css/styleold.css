@@ -102,23 +102,24 @@ h3 {
 /* Main Content Stlying */
 
 .main-content {
+  margin: 0 auto;
   grid-area: main-content;
 }
 
 .main-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-content: center;
   padding: 5px;
 }
 
 .headline {
   margin: 10px;
   margin-left: 30px;
+  padding: 10px;
   font-size: 25px;
   color: #358597;
   font-weight: medium;
-  align-items: center;
 }
 
 .main-header-search {
