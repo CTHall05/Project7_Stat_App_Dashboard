@@ -1,4 +1,4 @@
-const trafficCanvas = getElementById('traffic-chart');
+const trafficCanvas = document.getElementById('traffic-chart');
 const dailyCanvas = document.getElementById('daily-chart');
 const mobileCanvas = document.getElementById("mobile-chart");
 const alertBanner = document.getElementById("alert");
@@ -27,7 +27,7 @@ let trafficData = {
 };
 
 let trafficOptions = {
-  aspectRation: 2.5,
+  maintainAspectRatio: false,
   animation: {
     duration: 0
   },
