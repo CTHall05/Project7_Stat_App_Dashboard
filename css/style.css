@@ -4,6 +4,7 @@
   --main-project-color: #358597;
   --seccond-project-color: #f4a896;
   --lighter-main-color: #5ac1d8;
+  --white: white;
 }
 
 * {
@@ -104,6 +105,7 @@ canvas {
 
 .headline {
   margin: auto auto;
+  color: var(--main-project-color);
 }
 
 .main-header-search {
@@ -120,6 +122,74 @@ canvas {
   border-radius: 10%;
   border: 1px solid grey;
   cursor: pointer;
+}
+
+/* Alert */
+
+.alert-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 5px;
+  background-color: var(--seccond-project-color);
+  color: white;
+}
+
+/* Traffic Header & Line Graph */
+
+.traffic-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.traffic-header h3 {
+  text-align: center;
+  color: var(--lighter-main-color);
+  font-weight: 700;
+}
+
+.traffic-nav {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-top: 0;
+  padding: 0 5px;
+  gap: 10px;
+  list-style-type: none;
+  color: rgb(97, 96, 96);
+  font-weight: 600;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.traffic-nav li {
+  text-align: center;
+  padding: 0.3em 1.2em;
+  border-radius: 2em;
+}
+
+.traffic-nav li:hover {
+  background-color: var(--seccond-project-color);
+  color: var(--white);
+}
+
+/* Daily Traffic Bar Chart Section */
+
+.daily h3 {
+  text-align: center;
+  color: var(--lighter-main-color);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Mobile Users Doughnut Chart Section */
+
+.mobile h3 {
+  text-align: center;
+  color: var(--lighter-main-color);
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 @media (min-width: 768px) {
