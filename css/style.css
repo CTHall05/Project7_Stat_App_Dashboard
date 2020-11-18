@@ -214,6 +214,8 @@ canvas {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  border-bottom: 1px solid rgb(167, 167, 167);
+  padding-bottom: 30px;
 }
 
 .social-container {
@@ -234,7 +236,7 @@ canvas {
   border-bottom: 2px solid var(--main-project-color);
 }
 
-.fa {
+#social-icon {
   padding: 20px;
   font-size: 50px;
   width: 90px;
@@ -247,6 +249,7 @@ canvas {
 
 .social-text {
   text-align: left;
+  color: var(--lighter-main-color);
   font-size: 30px;
 }
 
@@ -259,6 +262,136 @@ canvas {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--main-project-color);
+}
+
+/* Members Section */
+
+.members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: grey;
+}
+
+.members-container {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin: 5px 20px 20px;
+  padding: 10px;
+  padding-bottom: 20px;
+  gap: 15px;
+  border-bottom: 1px solid rgb(167, 167, 167);
+}
+
+.members-text {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.members-text a {
+  color: var(--main-project-color);
+}
+
+/* Message User Section */
+
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 5px;
+  border-bottom: 1px solid rgb(167, 167, 167);
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.widget-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: grey;
+}
+
+/* Message Form Section */
+
+.form-field,
+.form-area {
+  padding: 5px;
+  width: 250px;
+  height: 30px;
+  background-color: rgb(226, 226, 226);
+  box-shadow: none;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 5px;
+}
+
+.form-area {
+  height: 100px;
+}
+
+.button-primary {
+  font-weight: 700;
+  color: white;
+  padding: 10px;
+  background-color: var(--main-project-color);
+  border: 1px solid var(--main-project-color);
+  border-radius: 5px;
+}
+
+.button-primary:hover {
+  background-color: var(--lighter-main-color);
+}
+
+/* Recent Activity Area */
+
+.recent-activity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  color: grey;
+}
+
+#arrow-icon {
+  font-size: 20px;
+  color: var(--main-project-color);
+}
+
+/* Settings Section */
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: gray;
+}
+
+/* Settings Sliders */
+
+.email-label {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #abababaa;
+  border-radius: 20px;
 }
 
 @media (min-width: 768px) {
