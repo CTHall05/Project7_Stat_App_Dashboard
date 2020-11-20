@@ -74,19 +74,21 @@
         </div>
       </section>
 
-      <section class="daily">
-        <h3>DAILY TRAFFIC</h3>
-        <div class="widget-container-half">
-          <canvas id="daily-chart"></canvas>
-        </div>
-      </section>
-      
-      <section class="mobile">
-        <h3>MOBILE USERS</h3>
-        <div class="widget-container-half">
-          <canvas id="mobile-chart"></canvas>
-        </div>
-      </section>
+      <div class="flex-half">
+        <section class="daily">
+          <h3>DAILY TRAFFIC</h3>
+          <div class="widget-container-half">
+            <canvas id="daily-chart"></canvas>
+          </div>
+        </section>
+        
+        <section class="mobile">
+          <h3>MOBILE USERS</h3>
+          <div class="widget-container-half">
+            <canvas id="mobile-chart"></canvas>
+          </div>
+        </section>
+      </div>
 
       <h4 class="social-title">SOCIAL STATS</h4>
       <section class="socials" id="social-visits">
@@ -121,120 +123,124 @@
         </div>
       </section>
 
-      <section class="members">
-        <h3>New Members</h3>
+      <div class="flex-half">
+        <section class="members">
+          <h3>New Members</h3>
 
-        <div class="members-container">
-          <img src="images/member-1.jpg" class="profile-image">
-          
-          <div class="members-text">
-            <p>Julia Smith</p>
-            <a href="#">julia.smith05@gmail.com</a>
-          </div>
-          <p>10/15/15</p>
-        </div>
-
-        <div class="members-container">
-          <img src="images/member-2.jpg" class="profile-image">
-          
-          <div class="members-text">
-            <p>Nate Diaz</p>
-            <a href="#">nate.diaz10@gmail.com</a>
-          </div>
-          <p>09/10/15</p>
-        </div>
-
-        <div class="members-container">
-          <img src="images/member-3.jpg" class="profile-image">
-          
-          <div class="members-text">
-            <p>Sun Zang</p>
-            <a href="#">sun.zang21@gmail.com</a>
-          </div>
-          <p>10/04/15</p>
-        </div>
-      </section>
-
-      <section class="recent-activity">
-        <h3>RECENT ACTIVITY</h3>
-
-        <div class="members-container">
-          <img src="images/member-1.jpg" class="profile-image">
-          
-          <div class="members-text">
-            <p>Julia Smith commented on your <strong>SEO App Plan</strong></p>
-            <p>4 hours ago</p>
-          </div>
-          <a href="#" id="arrow-icon"class="fa fa-chevron-right"></a>
-        </div>
-
-        <div class="members-container">
-          <img src="images/member-2.jpg" class="profile-image">
-          
-          <div class="members-text">
-            <p>Nate Diaz liked <strong>Facebook's Changes for 2021</strong></p>
-            <p>5 hours ago</p>
+          <div class="members-container">
+            <img src="images/member-1.jpg" class="profile-image">
+            
+            <div class="members-text">
+              <p>Julia Smith</p>
+              <a href="#">julia.smith05@gmail.com</a>
+            </div>
+            <p>10/15/15</p>
           </div>
 
-          <a href="#" id="arrow-icon"class="fa fa-chevron-right"></a>
-        </div>
-
-        <div class="members-container">
-          <img src="images/member-3.jpg" class="profile-image">
-          
-          <div class="members-text">
-            <p> Sun Zang liked <strong>Twitter's Changes for 2021</strong></p>
-            <p>1 day ago</p>
+          <div class="members-container">
+            <img src="images/member-2.jpg" class="profile-image">
+            
+            <div class="members-text">
+              <p>Nate Diaz</p>
+              <a href="#">nate.diaz10@gmail.com</a>
+            </div>
+            <p>09/10/15</p>
           </div>
 
-          <a href="#" id="arrow-icon"class="fa fa-chevron-right"></a>
-        </div>
-      </section>
-
-      <section class="message">
-        <h3>MESSAGE USER</h3>
-
-        <form class="widget-container">
-          <input type="text" placeholder="Search for User" class="form-field" id="userField">
-          <textarea placeholder="Message for User" class="form-area" id="messageField">
-          </textarea>
-          <button class="button-primary" id="send">SEND</button>
-        </form>
-      </section>
-
-      <section class="settings">
-        <h3>SETTINGS</h3>
-
-        <div class="setting-toggles">
-          <p>Send Email Notifications</p>
-          <div class="email-label">
-            <input type="checkbox" id="toggle" class="checkbox"/>
-            <label for="toggle" class="switch"><p class="on-off-p">On Off</p></label>
+          <div class="members-container">
+            <img src="images/member-3.jpg" class="profile-image">
+            
+            <div class="members-text">
+              <p>Sun Zang</p>
+              <a href="#">sun.zang21@gmail.com</a>
+            </div>
+            <p>10/04/15</p>
           </div>
-        </div>
+        </section>
 
-        <div class="setting-toggles">
-          <p>Set Profile to Public</p>
-          <div class="email-label">
-            <input type="checkbox" id="toggle" class="checkbox"/>
-            <label for="toggle" class="switch"><p class="on-off-p">On Off</p></label>
+        <section class="recent-activity">
+          <h3>RECENT ACTIVITY</h3>
+
+          <div class="members-container">
+            <img src="images/member-1.jpg" class="profile-image">
+            
+            <div class="members-text">
+              <p>Julia Smith commented on your <strong>SEO App Plan</strong></p>
+              <p>4 hours ago</p>
+            </div>
+            <a href="#" id="arrow-icon"class="fa fa-chevron-right"></a>
           </div>
-        </div>
 
-        <select class="form-field" id="timezone">
-          <option disabled selected>Select a Timezone</option>
-          <option>Far-East</option>
-          <option>Middle-East</option>
-          <option>Europe</option>
-          <option>East-Americas</option>
-          <option>West-Americas</option>
-        </select>
-        <div class="settings-button">
-          <button class="button-primary" id="save">Save</button>
-          <button class="button-disabled" id="cancel">Cancel</button>
-        </div>
+          <div class="members-container">
+            <img src="images/member-2.jpg" class="profile-image">
+            
+            <div class="members-text">
+              <p>Nate Diaz liked <strong>Facebook's Changes for 2021</strong></p>
+              <p>5 hours ago</p>
+            </div>
 
-      </section>
+            <a href="#" id="arrow-icon"class="fa fa-chevron-right"></a>
+          </div>
+
+          <div class="members-container">
+            <img src="images/member-3.jpg" class="profile-image">
+            
+            <div class="members-text">
+              <p> Sun Zang liked <strong>Twitter's Changes for 2021</strong></p>
+              <p>1 day ago</p>
+            </div>
+
+            <a href="#" id="arrow-icon"class="fa fa-chevron-right"></a>
+          </div>
+        </section>
+      </div>
+
+      <div class="flex-half">
+        <section class="message">
+          <h3>MESSAGE USER</h3>
+
+          <form class="widget-container">
+            <input type="text" placeholder="Search for User" class="form-field" id="userField">
+            <textarea placeholder="Message for User" class="form-area" id="messageField">
+            </textarea>
+            <button class="button-primary" id="send">SEND</button>
+          </form>
+        </section>
+
+        <section class="settings">
+          <h3>SETTINGS</h3>
+
+          <div class="setting-toggles">
+            <p>Send Email Notifications</p>
+            <div class="email-label">
+              <input type="checkbox" id="toggle" class="checkbox"/>
+              <label for="toggle" class="switch"><p class="on-off-p">On Off</p></label>
+            </div>
+          </div>
+
+          <div class="setting-toggles">
+            <p>Set Profile to Public</p>
+            <div class="email-label">
+              <input type="checkbox" id="toggle" class="checkbox"/>
+              <label for="toggle" class="switch"><p class="on-off-p">On Off</p></label>
+            </div>
+          </div>
+
+          <select class="form-field" id="timezone">
+            <option disabled selected>Select a Timezone</option>
+            <option>Far-East</option>
+            <option>Middle-East</option>
+            <option>Europe</option>
+            <option>East-Americas</option>
+            <option>West-Americas</option>
+          </select>
+          <div class="settings-button">
+            <button class="button-primary" id="save">Save</button>
+            <button class="button-disabled" id="cancel">Cancel</button>
+          </div>
+
+        </section>
+      </div>  
 
     </main>
   </div>
