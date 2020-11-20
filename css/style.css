@@ -211,6 +211,8 @@ canvas {
 .socials {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 10px;
   gap: 10px;
   border-bottom: 1px solid rgb(167, 167, 167);
   padding-bottom: 30px;
@@ -220,18 +222,17 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 250px;
+  width: 100%;
   height: 125px;
   background: rgb(226, 226, 226);
   border-radius: 5px;
 }
 
-.socials h4 {
+.social-title {
   text-align: center;
   color: var(--lighter-main-color);
   font-weight: 600;
   font-size: 1rem;
-  border-bottom: 2px solid var(--main-project-color);
 }
 
 #social-icon {
@@ -264,11 +265,21 @@ canvas {
 
 /* Members Section */
 
+.social-title,
+.members > h3,
+.recent-activity > h3 {
+  padding: 0 10px;
+  color: var(--lighter-main-color);
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
 .members {
   display: flex;
   flex-direction: column;
-  align-items: center;
   color: grey;
+  margin: 10px;
 }
 
 .members-container {
@@ -296,7 +307,6 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-items: center;
-  align-items: center;
   margin: 5px;
   border-bottom: 1px solid rgb(167, 167, 167);
   padding: 10px;
@@ -320,12 +330,14 @@ canvas {
 .form-field,
 .form-area {
   padding: 5px;
-  width: 250px;
-  height: 30px;
   background-color: rgb(226, 226, 226);
   box-shadow: none;
   border: 1px solid rgb(226, 226, 226);
   border-radius: 5px;
+}
+
+.form-field {
+  margin: 20px 0;
 }
 
 .form-area {
@@ -351,7 +363,6 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   margin: 10px;
   color: grey;
 }
@@ -359,6 +370,8 @@ canvas {
 #arrow-icon {
   font-size: 20px;
   color: var(--main-project-color);
+  text-align: right;
+  flex-grow: 1;
 }
 
 /* Settings Section */
@@ -366,11 +379,17 @@ canvas {
 .settings {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 10px;
-  margin-bottom: 30px;
-  color: gray;
+  justify-content: center;
+  margin: 5px;
+  border-bottom: 1px solid rgb(167, 167, 167);
+  color: grey;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.settings-button {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Settings Sliders */
@@ -427,17 +446,15 @@ canvas {
 /* Form Field */
 
 .form-field {
-  margin: 10px;
-  width: 250px;
   color: grey;
 }
 
-#save {
-  width: 125px;
+#save,
+#cancel {
+  flex-basis: 48%;
 }
 
 #cancel {
-  width: 125px;
   font-weight: 700;
   padding: 10px;
   border-radius: 5px;
@@ -532,18 +549,4 @@ canvas {
   }
 
   /* Traffic Chart */
-
-  /* Socials */
-
-  .socials {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 10px;
-  }
-
-  .social-container {
-    width: 200px;
-  }
 }
