@@ -383,7 +383,7 @@ canvas {
 .settings {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   margin: 5px;
   border-bottom: 1px solid rgb(167, 167, 167);
   color: grey;
@@ -402,49 +402,50 @@ canvas {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  width: 250px;
 }
 
-.on-off-p {
+.email-label {
   display: flex;
-  justify-content: center;
-  padding: 2px;
+  align-items: center;
   width: 70px;
 }
 
 .switch {
   position: relative;
-  display: flex;
-  align-items: center;
-
+  display: inline-block;
   width: 70px;
   height: 20px;
   background-color: grey;
-  border-radius: 20px;
+  border-radius: 30px;
+  border: 2px solid gray;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-.switch::after {
+.switch:after {
   content: "";
   position: absolute;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background-color: white;
-  top: 1px;
-  left: 1px;
-  transition: all 0.3s;
+  background-color: var(--white);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.checkbox:checked + .switch:after {
+  left: 49px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.checkbox:checked + .switch {
+  background-color: var(--seccond-project-color);
+  border-color: var(--seccond-project-color);
 }
 
 .checkbox {
   display: none;
-}
-
-.checkbox:checked + .switch::after {
-  left: 50px;
-}
-.checkbox:checked + .switch {
-  background-color: var(--seccond-project-color);
 }
 
 /* Form Field */
