@@ -65,6 +65,22 @@ canvas {
   width: 30px;
 }
 
+.bell-icon {
+  cursor: pointer;
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.bell-icon:hover {
+  cursor: pointer;
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
 .profile-image {
   border-radius: 50%;
   width: 50px;
@@ -260,6 +276,16 @@ canvas {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--main-project-color);
+}
+
+.twitter-svg,
+.facebook-svg,
+.google-svg {
+  fill: var(--main-project-color);
+  background-color: var(--seccond-project-color);
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
 }
 
 /* Members Section */
@@ -563,5 +589,61 @@ canvas {
 
   .members {
     justify-content: space-between;
+  }
+}
+
+/* Keyframes */
+
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
