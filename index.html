@@ -39,10 +39,11 @@
                   </g>
                 </g>
                 </svg>
+                <span class="badge">3</span>
               <div class="dropdown-content hidden">
-                <a href="#socials">Social Media Notification.</a>
-                <a href="#message">You need to message Sun.</a>
-                <a href="#settings">Please check your settings.</a>
+                <a href="#social-section">Check Twitter</a>
+                <a href="#message-section">Reply to Sun Zang</a>
+                <a href="#setting-section">Adjust Settings</a>
               </div>
           </div>
           <div id="notifications"></div>
@@ -80,7 +81,7 @@
         <div class="traffic-header">
             <h3>TRAFFIC</h3>
             <ul class="traffic-nav">
-              <li class="traffic-nav-link">Hourly</li>
+              <li id="hourlyTraffic" class="traffic-nav-link">Hourly</li>
               <li class="traffic-nav-link">Daily</li>
               <li class="traffic-nav-link active">Weekly</li>
               <li class="traffic-nav-link">Monthly</li>
@@ -107,7 +108,7 @@
         </section>
       </div>
 
-      <h4 class="social-title">SOCIAL STATS</h4>
+      <h4 class="social-title" id="social-section">SOCIAL STATS</h4>
       <section class="socials" id="social-visits">
         <div class="social-container">
           <div class="social-image">
@@ -235,7 +236,7 @@
 
       <div class="flex-half">
         <section class="message">
-          <h3>MESSAGE USER</h3>
+          <h3 id="message-section">MESSAGE USER</h3>
 
           <form class="widget-container">
             <input type="text" placeholder="Search for User" class="form-field" id="userField">
@@ -246,7 +247,7 @@
         </section>
 
         <section class="settings">
-          <h3>SETTINGS</h3>
+          <h3 id="setting-section">SETTINGS</h3>
 
           <div class="setting-toggles">
             <p>Send Email Notifications</p>
