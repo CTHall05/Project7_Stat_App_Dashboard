@@ -62,6 +62,7 @@ canvas {
 }
 
 .bell-icon {
+  position: relative;
   cursor: pointer;
   width: 30px;
   padding-top: 10px;
@@ -86,28 +87,50 @@ svg:hover,
   animation: ding 0.7s ease-out 0.2s forwards;
 }
 
+.badge {
+  position: absolute;
+  top: -3px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: var(--seccond-project-color);
+  color: var(--white);
+}
+
+.badge:hover {
+  transform: rotate(360deg);
+  transition: all 0.3s ease-in 0s;
+}
+
 /* ===========================
     Bell Drop Down Menu */
 /* =========================== */
 
-/* .dropdown-content {
-  display: none;
+.dropdown-content {
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
+  background-color: var(--lighter-main-color);
+  min-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5%;
   z-index: 1;
-} */
+}
 
 .hidden {
   display: none;
 }
 
 .dropdown-content a {
-  color: black;
+  display: block;
+  font-weight: 700;
+  color: var(--white);
   padding: 12px 16px;
   text-decoration: none;
-  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--seccond-project-color);
+  border: 1px solid var(--white);
+  border-radius: 10%;
 }
 
 .profile-image {
@@ -226,7 +249,8 @@ svg:hover,
   border-radius: 2em;
 }
 
-.traffic-nav li:hover {
+.traffic-nav li:hover,
+.active {
   background-color: var(--seccond-project-color);
   color: var(--white);
 }
