@@ -3,7 +3,8 @@ const dailyCanvas = document.getElementById('daily-chart');
 const mobileCanvas = document.getElementById("mobile-chart");
 const alertBanner = document.getElementById("alert");
 const bellIconClick = document.getElementById("bell-svg");
-
+const notifications = document.querySelector('.dropdown-content');
+const hourlyTraffic = document.getElementById('hourlyTraffic');
 
 
 
@@ -62,6 +63,24 @@ let trafficChart = new Chart(trafficCanvas, {
   type: 'line',
   data: trafficData,
   options: trafficOptions
+});
+
+// Traffic Chart Hourly //
+
+let trafficHourlyData = {
+  labels: ["10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm"],
+  datasets: [{
+    data: [0, 10, 20, 30, 40, 50],
+    backgroundColor: 'rgba(116, 119, 191, .3)',
+  }]
+};
+
+hourlyTraffic.addEventListener('click', () => {
+  trafficChart = new Chart(trafficCanvas, {
+    type: 'line',
+    data: trafficHourlyData,
+    options: trafficOptions
+  })
 });
 
 // Bar Graph //
