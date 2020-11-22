@@ -11,12 +11,8 @@ const bellIconClick = document.getElementById("bell-svg");
 // Bell Drop Down Menu //
 
 bellIconClick.addEventListener('click', () => {
-  bellIconClick.innerHTML = `
-    <div class="dropdown">
-      <a href="#socials" class="">Social Media</a>
-    </div>
-    `
-})
+  notifications.classList.toggle('hidden');
+});
 
 // ================== //
 
