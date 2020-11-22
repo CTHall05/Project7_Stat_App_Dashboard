@@ -81,6 +81,15 @@ canvas {
   }
 }
 
+/* ===========================
+    Bell Drop Down Menu */
+/* =========================== */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
 svg:hover,
 .bell-icon {
   animation: ding 0.7s ease-out 0.2s forwards;
