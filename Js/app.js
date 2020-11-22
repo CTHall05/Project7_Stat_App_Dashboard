@@ -2,6 +2,24 @@ const trafficCanvas = document.getElementById('traffic-chart');
 const dailyCanvas = document.getElementById('daily-chart');
 const mobileCanvas = document.getElementById("mobile-chart");
 const alertBanner = document.getElementById("alert");
+const bellIconClick = document.getElementById("bell-svg");
+
+
+
+
+
+// Bell Drop Down Menu //
+
+bellIconClick.addEventListener('click', () => {
+  bellIconClick.innerHTML = `
+    <div class="dropdown">
+      <a href="#socials" class="">Social Media</a>
+    </div>
+    `
+})
+
+// ================== //
+
 
 
 alertBanner.innerHTML = `
