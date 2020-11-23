@@ -1,12 +1,27 @@
 const trafficCanvas = document.getElementById('traffic-chart');
 const dailyCanvas = document.getElementById('daily-chart');
-const mobileCanvas = document.getElementById("mobile-chart");
-const alertBanner = document.getElementById("alert");
-const bellIconClick = document.getElementById("bell-svg");
+const mobileCanvas = document.getElementById('mobile-chart');
+const alertBanner = document.getElementById('alert');
+const bellIconClick = document.getElementById('bell-svg');
 const notifications = document.querySelector('.dropdown-content');
 const hourlyTraffic = document.getElementById('hourlyTraffic');
 
+// Traffic Buttons Container //
+let btnContainer = document.getElementById('traffic-buttons');
 
+// Traffic Buttons By Class //
+let btns = btnContainer.getElementsByClassName("traffic-nav-link");
+
+// Loop through the buttons //
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", () => {
+    let current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += "active";
+  });
+}
+
+// ========================== //
 
 
 // Bell Drop Down Menu //
