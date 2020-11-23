@@ -255,6 +255,10 @@ svg:hover,
   color: var(--white);
 }
 
+li:active {
+  background-color: var(--seccond-project-color);
+}
+
 /* Daily Traffic Bar Chart Section */
 
 .daily {
