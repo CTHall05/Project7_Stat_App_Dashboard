@@ -25,19 +25,6 @@ for (let i = 0; i < btns.length; i++) {
   });
 }
 
-window.onclick = function(event) {
-  if (!event.target.matches('.bell-icon')) {
-    let dropdowns = document.getElementsByClassName("dropdown-content");
-    let i;
-    for (i = 0; i < dropdowns.length; i++) {
-      let openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('dropdown-content')) {
-        openDropdown.classList.add = "hidden";
-      }
-    }
-  }
-}
-
 // ========================== //
 
 
@@ -47,6 +34,13 @@ bellIconClick.addEventListener('click', () => {
   notifications.classList.toggle('hidden');
 });
 
+window.onclick = function(event) {
+  if (event.target === bellIconClick) {
+    return;
+  } else if (!notifications.classList.contains('hidden')) {
+    notifications.classList.add('hidden');
+  }
+};
 // ================== //
 
 
