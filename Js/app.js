@@ -5,6 +5,10 @@ const alertBanner = document.getElementById('alert');
 const bellIconClick = document.getElementById('bell-svg');
 const notifications = document.querySelector('.dropdown-content');
 const hourlyTraffic = document.getElementById('hourlyTraffic');
+const dailyTraffic = document.getElementById('dailyTraffic');
+const weeklyTraffic = document.getElementById('weeklyTraffic');
+const monthlyTraffic = document.getElementById('monthlyTraffic');
+
 
 // Traffic Buttons Container //
 let btnContainer = document.getElementById('traffic-buttons');
@@ -14,11 +18,24 @@ let btns = btnContainer.getElementsByClassName("traffic-nav-link");
 
 // Loop through the buttons //
 for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", () => {
+  btns[i].addEventListener("click", (e) => {
     let current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
-    this.className += "active";
+    e.target.classList.add("active");
   });
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.bell-icon')) {
+    let dropdowns = document.getElementsByClassName("dropdown-content");
+    let i;
+    for (i = 0; i < dropdowns.length; i++) {
+      let openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('dropdown-content')) {
+        openDropdown.classList.add = "hidden";
+      }
+    }
+  }
 }
 
 // ========================== //
@@ -48,6 +65,7 @@ alertBanner.addEventListener('click', (e) => {
   }
 });
 
+// Weekly Traffic Data //
 
 let trafficData = {
   labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
@@ -80,12 +98,22 @@ let trafficChart = new Chart(trafficCanvas, {
   options: trafficOptions
 });
 
-// Traffic Chart Hourly //
+weeklyTraffic.addEventListener('click', () => {
+  trafficChart = new Chart(trafficCanvas, {
+    type: 'line',
+    data: trafficData,
+    options: trafficOptions
+  })
+});
+
+// =================== //
+
+// Hourly Taffic Data //
 
 let trafficHourlyData = {
   labels: ["10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm"],
   datasets: [{
-    data: [0, 10, 20, 30, 40, 50],
+    data: [0, 10, 30, 20, 45, 25, 15, 30, 35, 42, 50],
     backgroundColor: 'rgba(116, 119, 191, .3)',
   }]
 };
@@ -94,6 +122,46 @@ hourlyTraffic.addEventListener('click', () => {
   trafficChart = new Chart(trafficCanvas, {
     type: 'line',
     data: trafficHourlyData,
+    options: trafficOptions
+  })
+});
+
+// =================== //
+
+// Daily Traffic Data //
+
+let trafficDailyData = {
+  labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu"],
+  datasets: [{
+    data: [0, 200, 400, 100, 250, 350, 400, 300, 350, 200, 100],
+    backgroundColor: 'rgba(116, 119, 191, .3)',
+  }]
+};
+
+dailyTraffic.addEventListener('click', () => {
+  trafficChart = new Chart(trafficCanvas, {
+    type: 'line',
+    data: trafficDailyData,
+    options: trafficOptions
+  })
+});
+
+// =================== //
+
+// Monthly Traffic Data //
+
+let trafficMonthlyData = {
+  labels: ["February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  datasets: [{
+    data: [12500, 10000, 8500, 9000, 13500, 15000, 7500, 8700, 9000, 11500, 8500],
+    backgroundColor: 'rgba(116, 119, 191, .3)',
+  }]
+};
+
+monthlyTraffic.addEventListener('click', () => {
+  trafficChart = new Chart(trafficCanvas, {
+    type: 'line',
+    data: trafficMonthlyData,
     options: trafficOptions
   })
 });
