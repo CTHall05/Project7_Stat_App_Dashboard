@@ -245,3 +245,9 @@ send.addEventListener('click', () => {
     alert(`Message successfully sent to: ${user.value}`);
   }
 });
+
+// ========================== //
+
+// Auto Complete Form //
+
+const members = ['Julia Smith', 'Nate Diaz', 'Sun Zang', 'John Smith'];
