@@ -238,14 +238,22 @@
         <section class="message">
           <h3 id="message-section">MESSAGE USER</h3>
 
-          <form class="widget-container">
-            <input type="text" placeholder="Search for User" class="form-field" id="userField">
+          <form autocomplete="off" action="/action_page.php" class="widget-container">
+            <input type="text" placeholder="Search for User" class="form-field autocomplete" id="members" name="members" list="membersField"></input>
+            <datalist id="membersField">
+              <option>John Smith</option>
+              <option>Julia Smith</option>
+              <option>Nate Diaz</option>
+              <option>Sun Zang</option>
+              <option>Julius Cesar</option>
+              <option>Pompey Magnus</option>
+            </datalist>
             <textarea placeholder="Message for User" class="form-area" id="messageField">
             </textarea>
             <button class="button-primary" id="send">SEND</button>
           </form>
         </section>
-
+        
         <section class="settings">
           <h3 id="setting-section">SETTINGS</h3>
 
