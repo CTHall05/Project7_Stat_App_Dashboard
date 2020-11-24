@@ -428,9 +428,7 @@ li:active {
 
 /*  Message User Autocomplete */
 
-option {
-  width: 300px;
-  height: 300px;
+input[datalist] {
   background-color: var(--seccond-project-color);
 }
 
@@ -451,9 +449,11 @@ option {
 
 .form-area {
   height: 100px;
+  resize: none;
 }
 
 .button-primary {
+  cursor: pointer;
   font-weight: 700;
   color: white;
   padding: 10px;
@@ -564,12 +564,17 @@ option {
 }
 
 #cancel {
+  cursor: pointer;
   font-weight: 700;
   padding: 10px;
   border-radius: 5px;
   background-color: rgb(167, 167, 167);
   border: 1px solid rgb(167, 167, 167);
   color: white;
+}
+
+#cancel:hover {
+  background-color: rgb(118, 118, 118);
 }
 
 @media (min-width: 768px) {
