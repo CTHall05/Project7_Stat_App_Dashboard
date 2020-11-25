@@ -248,6 +248,43 @@ send.addEventListener('click', () => {
 
 // ========================== //
 
-// Auto Complete Form //
+// Local Storage Saved Settings //
+const emailToggle = document.getElementById('toggle');
+const profileToggle = document.getElementById('toggle_2');
 
-const members = ['Julia Smith', 'Nate Diaz', 'Sun Zang', 'John Smith'];
+function testStorage() {
+  const test = 'test';
+   try {
+     localStorage.setItem(test, test);
+     localStorage.removeItem(test);
+     return true;
+    } catch(e) {
+      return false;
+  }  
+}
+
+if (testStorage() === true) {
+  document.getElementById("save").addEventListener("click", () => {
+    localStorage.setItem('emailNotification', emailToggle.checked);
+    localStorage.setItem('profilePublic', profileToggle.checked);
+    alert("Settings Successfully Saved!");
+  });
+};
+
+document.getElementById("cancel").addEventListener("click", () => {
+  const cancel = confirm('Are you sure you want to cancel changes?');
+
+   if (cancel) {
+    localStorage.setItem('emailNotification', emailToggle.checked = null);
+    localStorage.setItem('profilePublic', profileToggle.checked = null);
+   };
+});
+
+const loadSettings = function() {
+  if (emailNotification !== null) {
+    emailToggle.checked = (emailNotification === 'true');
+  }
+  if (profilePublic !== null) {
+    profileToggle.checked = (profilePublic === 'true');
+  }
+};
