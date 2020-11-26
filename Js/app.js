@@ -230,7 +230,7 @@ let mobileChart = new Chart(mobileCanvas, {
 
 // Messaging Section of Site //
 
-const user = document.getElementById("userField");
+const user = document.getElementById("members");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
 
