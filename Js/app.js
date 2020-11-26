@@ -251,6 +251,7 @@ send.addEventListener('click', () => {
 // Local Storage Saved Settings //
 const emailToggle = document.getElementById('toggle');
 const profileToggle = document.getElementById('toggle_2');
+const timezoneSelect = document.querySelector('#timezone')
 
 function testStorage() {
   const test = 'test';
@@ -268,9 +269,9 @@ if (testStorage() === true) {
   document.getElementById("save").addEventListener("click", () => {
     localStorage.setItem('emailNotification', emailToggle.checked);
     localStorage.setItem('profilePublic', profileToggle.checked);
+    localStorage.setItem('myTimeZoneSelectedValue', timezoneSelect.value);
     alert("Settings Successfully Saved!");
   });
-
 
   document.getElementById("cancel").addEventListener("click", () => {
     const cancel = confirm('Are you sure you want to cancel changes?');
@@ -278,15 +279,20 @@ if (testStorage() === true) {
     if (cancel) {
       localStorage.setItem('emailNotification', emailToggle.checked = null);
       localStorage.setItem('profilePublic', profileToggle.checked = null);
+      localStorage.setItem('myTimeZoneSelectedValue', timezoneSelect.value = 'Select a Timezone');
     };
   }); 
 
   document.getElementById('timezone').addEventListener("click", () => {
     localStorage.setItem('myTimeZoneSelectedValue', 'far-east');
+    localStorage.setItem('myTimeZoneSelectedValue', 'middle-east');
+    localStorage.setItem('myTimeZoneSelectedValue', 'europe');
+    localStorage.setItem('myTimeZoneSelectedValue', 'east-americas');
+    localStorage.setItem('myTimeZoneSelectedValue', 'west-americas');
   });
+
 }
 
 emailToggle.checked = JSON.parse(localStorage.getItem('emailNotification'));
 profileToggle.checked = JSON.parse(localStorage.getItem('profilePublic'));
-
-
+document.querySelector('#timezone').value = localStorage.getItem('myTimeZoneSelectedValue');
