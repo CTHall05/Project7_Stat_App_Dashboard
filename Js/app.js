@@ -264,27 +264,29 @@ function testStorage() {
 }
 
 if (testStorage() === true) {
+  
   document.getElementById("save").addEventListener("click", () => {
     localStorage.setItem('emailNotification', emailToggle.checked);
     localStorage.setItem('profilePublic', profileToggle.checked);
     alert("Settings Successfully Saved!");
   });
-};
 
-document.getElementById("cancel").addEventListener("click", () => {
-  const cancel = confirm('Are you sure you want to cancel changes?');
 
-   if (cancel) {
-    localStorage.setItem('emailNotification', emailToggle.checked = null);
-    localStorage.setItem('profilePublic', profileToggle.checked = null);
-   };
-});
+  document.getElementById("cancel").addEventListener("click", () => {
+    const cancel = confirm('Are you sure you want to cancel changes?');
 
-const loadSettings = function() {
-  if (emailNotification !== null) {
-    emailToggle.checked = (emailNotification === 'true');
-  }
-  if (profilePublic !== null) {
-    profileToggle.checked = (profilePublic === 'true');
-  }
-};
+    if (cancel) {
+      localStorage.setItem('emailNotification', emailToggle.checked = null);
+      localStorage.setItem('profilePublic', profileToggle.checked = null);
+    };
+  }); 
+
+  document.getElementById('timezone').addEventListener("click", () => {
+    localStorage.setItem('myTimeZoneSelectedValue', 'far-east');
+  });
+}
+
+emailToggle.checked = JSON.parse(localStorage.getItem('emailNotification'));
+profileToggle.checked = JSON.parse(localStorage.getItem('profilePublic'));
+
+
